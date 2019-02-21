@@ -16,6 +16,31 @@ class ViewController: UIViewController, UITableViewDataSource {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        
+//        let overlay = UIView(frame: view.bounds)
+//        overlay.backgroundColor = UIColor.white
+//        
+//        let switchFrame = UISwitch().frame
+//        print(switchFrame)
+//        
+//        var origin = CGPoint.zero
+//        while origin.x < overlay.frame.size.width {
+//            while origin.y < overlay.frame.size.height {
+//                origin.y += switchFrame.size.height
+//                let newSwitch = UISwitch()
+//                newSwitch.frame = CGRect(x: origin.x, y: origin.y, width: switchFrame.width, height: switchFrame.height)
+//                overlay.addSubview(newSwitch)
+//            }
+//            
+//            origin.y = 0
+//            origin.x += switchFrame.size.width
+//        }
+//        
+//        view.addSubview(overlay)
+//    }
+    
     @IBAction func tappedSwitch(sender: UISwitch) {
         if let theSwitch = sender as? SwitchWithRow {
             array[theSwitch.row] = theSwitch.isOn
